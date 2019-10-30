@@ -1,5 +1,10 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const TMDB = {
-  api_key: 'https://image.tmdb.org/t/p/w500/',
+  api_key: '85cd5e63356ff0dc25f30b35f77d2140',
+  
   films: [
     {
       "id": 346364,

@@ -1,12 +1,9 @@
 import './index.css'
-
+import './normalize.css'
 import React, { Component } from 'react'
 
 export default class Fave extends Component {
-    constructor(props) {
-        super(props)
-        
-    }
+    
     //this.props.isFave 
     // handleClick = (element) => {
     //     // this.setState({
@@ -28,17 +25,13 @@ export default class Fave extends Component {
     state ={
         selectedFilm: null
     }
-    Fave(fimeName,filmYear){
-
-    }
+    
     render() {
+        let str = ""
+        this.props.isFave? str =  "remove_from_queue" : str =  "add_to_queue"
         return (
-            this.props.isFave? 
-            <div className="film-row-fave remove_to_queue" onClick={this.handleClick} >
-               <p className="material-icons">remove_to_queue</p>
-            </div>:
-            <div className="film-row-fave add_to_queue" onClick={this.handleClick} >
-               <p className="material-icons">add_to_queue</p>
+            <div className="film-row-fave `{str}`" onClick={this.handleClick} >
+               <p className="material-icons">{str}</p>
             </div>
         )
     }
