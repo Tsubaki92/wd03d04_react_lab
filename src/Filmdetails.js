@@ -1,8 +1,5 @@
 import React, {Component} from 'react'
-
 import './index'
-
-
 
 export default class Filmdetails extends Component {
 
@@ -40,9 +37,5 @@ export default class Filmdetails extends Component {
                 {details}   
             </div>
         )
-    }
-    
+    }  
 }
-
-
-

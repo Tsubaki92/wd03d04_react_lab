@@ -35,8 +35,6 @@ export default class App extends Component {
 
   handleDetailsClick = (film)=>{
     const url = `https://api.themoviedb.org/3/movie/${film.id}?api_key=${TMDB.api_key}&append_to_response=videos,images&language=en` 
-    console.log('Hi');
-    console.log(film);
     
     axios({
       method: 'GET',
@@ -50,8 +48,6 @@ export default class App extends Component {
   
   
   render() {
-  
-    //console.log(TMDB);
     let imges = 'https://image.tmdb.org/t/p/w500/'
 
     return (
